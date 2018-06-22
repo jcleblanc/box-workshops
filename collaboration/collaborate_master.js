@@ -15,7 +15,7 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 const client = sdk.getAppAuthClient('enterprise');
 
 /****************************************************************
-* Collaborate user on a file
+* Collaborate user on a folder
 ****************************************************************/
 let collabUserId = '14516989';
 let folderId = '33552487093';
@@ -25,6 +25,9 @@ let folderId = '33552487093';
   console.log(collaboration);
 });*/
 
+/****************************************************************
+* Remove folder collaboration
+****************************************************************/
 const collaborationId = '13480198890';
 client.collaborations.delete(collaborationId).then(() => {
   console.log('removal successful');
