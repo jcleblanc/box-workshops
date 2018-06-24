@@ -18,7 +18,7 @@ const client = sdk.getAppAuthClient('enterprise');
 * Create Webhook
 ****************************************************************/
 // CREATE WEBHOOK
-/*const fileId = '207907190751';
+const fileId = '207907190751';
 const notificationURL = 'https://www.jcleblanc.com/';
 
 client.webhooks.create(
@@ -30,7 +30,7 @@ client.webhooks.create(
   ]
 ).then(webhook => {
   console.log(util.inspect(webhook, false, null));
-});*/
+});
 
 /****************************************************************
 * Update Webhook
