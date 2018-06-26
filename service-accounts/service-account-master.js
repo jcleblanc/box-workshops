@@ -22,10 +22,11 @@ const client = sdk.getAppAuthClient('enterprise');
 //const client = sdk.getAppAuthClient('user', '14516989');
 
 // Upload file
-var stream = fs.createReadStream('temp.txt');
+const stream = fs.createReadStream('temp.txt');
 client.files.uploadFile('0', 'tempdoc.txt', stream, callback);
 
-function callback(err, res) {
-  console.log(util.inspect(err, false, null));
+client.files.uploadFile('0', 'tempdoc.txt', stream).then((err, res) => {
   console.log(util.inspect(res, false, null));
-}
+}).catch(function (err) {
+  console.log(util.inspect(err.response.body, false, null));
+}); 

@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
     // Render pug template sample, passing in downscoped token and the file / folder ID to render
     res.render('contentExplorer', { at: tokenInfo.accessToken, fid: '33552487093' });
   }).catch((err) => {
-    console.error(err);
+    console.error(err.response.body);
   });
 });
 
