@@ -16,9 +16,11 @@ const client = sdk.getAppAuthClient('enterprise');
 
 // Upload file
 var stream = fs.createReadStream('temp.txt');
-client.files.uploadFile('0', 'tempdoc.txt', stream, callback);
 
-function callback(err, res) {
-  console.log(util.inspect(err.response.body, false, null));
-  console.log(util.inspect(res, false, null));
-}
+client.files.uploadFile('0', 'tempdoc.txt', stream).then((err, metadata) => {
+  console.log("file uploaded");
+}).catch(function (err) {
+  if (err.response && err.response.body && err.response.body.code === 'item_name_in_use') {
+    console.log('duplicate file detected');
+  }
+});  
