@@ -16,7 +16,7 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 
 // Create service account client
 const client = sdk.getAppAuthClient('enterprise');
-//console.log(util.inspect(client, false, null));
+console.log(util.inspect(client, false, null));
 
 /**************************************************************
 * Setup auth via manual public / private keys
@@ -41,8 +41,8 @@ const sdk = new boxSDK({
   }
 });
 const client = sdk.getAppAuthClient('enterprise', enterpriseId);
-console.log(util.inspect(client, false, null));*/
-
+console.log(util.inspect(client, false, null));
+*/
 /**************************************************************
 * Create new app user
 **************************************************************/
@@ -83,7 +83,7 @@ client.enterprise.addUser(
 /**************************************************************
 * Delete user
 **************************************************************/
-/*const userId = '3758950911';
+/*const userId = '3771521865';
 client.users.delete(userId).then(() => {
   console.log(`${userId} deleted`);
 });*/

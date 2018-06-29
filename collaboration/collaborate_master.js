@@ -21,14 +21,14 @@ let collabUserId = '14516989';
 let folderId = '33552487093';
 
 // Create with user ID - methods exist for email and group ID as well
-/*client.collaborations.createWithUserID(collabUserId, folderId, client.collaborationRoles.CO_OWNER).then((collaboration) => {
+client.collaborations.createWithUserID(collabUserId, folderId, client.collaborationRoles.CO_OWNER).then((collaboration) => {
   console.log(collaboration);
-});*/
+});
 
 /****************************************************************
 * Remove folder collaboration
 ****************************************************************/
-const collaborationId = '13480198890';
+/*const collaborationId = '13504378204';
 client.collaborations.delete(collaborationId).then(() => {
   console.log('removal successful');
-});
+});*/

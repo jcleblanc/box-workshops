@@ -28,8 +28,8 @@ client.exchangeToken(scopes, folder).then(downscopedToken => {
   
   //FILE UPLOAD
   const stream = fs.createReadStream('temp.txt');
-  dsclient.files.uploadFile('33552487093', 'tempdoc.txt', stream).then((err, res) => {
-    console.log(util.inspect(res, false, null));
+  dsclient.files.uploadFile('33552487093', 'tempdoc.txt', stream).then(file => {
+    console.log(util.inspect(file, false, null));
   }).catch(function (err) {
     console.log(util.inspect(err.response.body, false, null));
   }); 

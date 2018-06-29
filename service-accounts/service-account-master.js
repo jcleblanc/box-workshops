@@ -23,10 +23,8 @@ const client = sdk.getAppAuthClient('enterprise');
 
 // Upload file
 const stream = fs.createReadStream('temp.txt');
-client.files.uploadFile('0', 'tempdoc.txt', stream, callback);
-
-client.files.uploadFile('0', 'tempdoc.txt', stream).then((err, res) => {
-  console.log(util.inspect(res, false, null));
+client.files.uploadFile('0', 'tempdoc.txt', stream).then(file => {
+  console.log(util.inspect(file, false, null));
 }).catch(function (err) {
   console.log(util.inspect(err.response.body, false, null));
 }); 
