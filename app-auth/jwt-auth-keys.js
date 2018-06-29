@@ -9,12 +9,12 @@ const fs = require('fs');                // File system for config
 * Setup auth via manual public / private keys
 **************************************************************/
 // Fetch private key for signing the JWT
-const jwtClientId = '1xy8yqzr9tyvloui0nk9mrmhgpr3c6pv';
-const jwtClientSecret = 'NGGGoDYDVTdokOUI4jGTuWA8xuQYs6hl';
-const publicKeyId = '1h9yaj1t';
-const enterpriseId = '17404983';
+const jwtClientId = 'YOUR CLIENT ID';
+const jwtClientSecret = 'YOUR CLIENT SECRET';
+const publicKeyId = 'YOUR APP PUBLIC KEY ID';
+const enterpriseId = 'YOUR APP ENTERPRISE ID';
 const keyPath = 'private.pem';
-const keyPass = 'e3kbsa';
+const keyPass = 'PRIVATE KEY PASSWORD';
 
 const secret = fs.readFileSync(keyPath);
 

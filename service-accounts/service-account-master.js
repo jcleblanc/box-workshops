@@ -6,6 +6,7 @@ const boxSDK = require('box-node-sdk');  // Box SDK
 const fs = require('fs');                // File system for config
 
 // Fetch config file for instantiating SDK instance
+// SAVE YOUR OWN APP CONFIG FILE TO config.json 
 const configJSON = JSON.parse(fs.readFileSync('config.json'));
 
 // Instantiate instance of SDK using generated JSON config
@@ -15,7 +16,7 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 const client = sdk.getAppAuthClient('enterprise');
 
 // Set service account to use as-user header
-//client.asUser('14516989');
+client.asUser('14516989');
 //client.asSelf();
 
 // Create app user client (user access token)

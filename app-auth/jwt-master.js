@@ -9,7 +9,8 @@ const fs = require('fs');                // File system for config
 * Setup auth via downloaded JSON config file
 **************************************************************/
 // Fetch config file for instantiating SDK instance
-const configJSON = JSON.parse(fs.readFileSync('config.json'));
+// SAVE YOUR OWN APP CONFIG FILE TO config.json 
+/*const configJSON = JSON.parse(fs.readFileSync('config.json'));
 
 // Instantiate instance of SDK using generated JSON config
 const sdk = boxSDK.getPreconfiguredInstance(configJSON);
@@ -17,17 +18,17 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 // Create service account client
 const client = sdk.getAppAuthClient('enterprise');
 console.log(util.inspect(client, false, null));
-
+*/
 /**************************************************************
 * Setup auth via manual public / private keys
 **************************************************************/
 // Fetch private key for signing the JWT
-/*const jwtClientId = '1xy8yqzr9tyvloui0nk9mrmhgpr3c6pv';
-const jwtClientSecret = 'NGGGoDYDVTdokOUI4jGTuWA8xuQYs6hl';
-const publicKeyId = '1h9yaj1t';
-const enterpriseId = '17404983';
+const jwtClientId = 'YOUR CLIENT ID';
+const jwtClientSecret = 'YOUR CLIENT SECRET';
+const publicKeyId = 'ENTERPRISE PUBLIC KEY ID';
+const enterpriseId = 'ENTERPRISE ID';
 const keyPath = 'private.pem';
-const keyPass = 'e3kbsa';
+const keyPass = 'PRIVATE KEY PASSWORD';
 
 const secret = fs.readFileSync(keyPath);
 
@@ -41,8 +42,8 @@ const sdk = new boxSDK({
   }
 });
 const client = sdk.getAppAuthClient('enterprise', enterpriseId);
-console.log(util.inspect(client, false, null));
-*/
+//console.log(util.inspect(client, false, null));
+
 /**************************************************************
 * Create new app user
 **************************************************************/
@@ -83,7 +84,7 @@ client.enterprise.addUser(
 /**************************************************************
 * Delete user
 **************************************************************/
-/*const userId = '3771521865';
+const userId = '3771881521';
 client.users.delete(userId).then(() => {
   console.log(`${userId} deleted`);
-});*/
+});

@@ -9,6 +9,7 @@ const fs = require('fs');                // File system for config
 * Setup auth via downloaded JSON config file
 **************************************************************/
 // Fetch config file for instantiating SDK instance
+// SAVE YOUR OWN APP CONFIG FILE TO config.json 
 const configJSON = JSON.parse(fs.readFileSync('config.json'));
 
 // Instantiate instance of SDK using generated JSON config
