@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());       
 app.use(bodyParser.urlencoded({ extended: false })); 
 
-// Render element via serviceName = contentExplorer, contentPicker, contentPreview, contentUploader
+// Listen for HTTP POST webhook events
 app.post('/', (req, res) => {
   const data = req.body;
   let trigger = '';
