@@ -1,0 +1,26 @@
+{
+  "name": "clarifai-simple",
+  "version": "1.0.0",
+  "description": "Box Skills image analysis sample",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "box-node-sdk": "^1.22.0",
+    "clarifai": "^2.9.0",
+    "express": "^4.16.4",
+    "util": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "skills",
+    "clarifai",
+    "machine",
+    "learning"
+  ],
+  "author": "Jonathan LeBlanc",
+  "license": "ISC"
+}
