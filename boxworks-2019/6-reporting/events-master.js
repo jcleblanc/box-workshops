@@ -33,10 +33,11 @@ const client = sdk.getAppAuthClient('enterprise');
 /****************************************************************
 * Poll the event stream between dates
 ****************************************************************/
-/*client.events.getEnterpriseEventStream({
+client.events.getEnterpriseEventStream({
   //eventTypeFilter: [client.events.enterpriseEventTypes.UPLOAD, client.events.enterpriseEventTypes.LOGIN],
   startDate: '2019-09-01T00:00:00-08:00',
   endDate: '2019-09-20T00:00:00-08:00',
+  stream_type: 'admin_logs',
   pollingInterval: 0
 }, function(err, stream) {
 	if (err) { console.log(util.inspect(err, false, null)); }
@@ -48,4 +49,4 @@ const client = sdk.getAppAuthClient('enterprise');
 	stream.on('end', function(events) {
 		console.log('End of stream');
 	});
-});*/
+});
